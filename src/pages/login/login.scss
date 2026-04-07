@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+
+}
+
+.Principal2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 95dvh;
+    min-height: 95vh;
+
+
+
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6vh;
+
+        .spines-config {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 5vh;
+
+            .loading-text {
+                font-weight: 410;
+                font-size: 2.3vh;
+            }
+
+            .dots {
+                display: inline-block;
+                width: 1em;
+                /* espaço fixo para 3 pontos */
+                text-align: left;
+            }
+
+            .dots::after {
+                content: '';
+                animation: dots 2s steps(4, end) infinite;
+            }
+
+            @keyframes dots {
+                0% {
+                    content: '';
+                }
+
+                25% {
+                    content: '.';
+                }
+
+                50% {
+                    content: '..';
+                }
+
+                75% {
+                    content: '...';
+                }
+
+                100% {
+                    content: '';
+                }
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+                border: 6px solid #063671;
+                border-top-color: #AB092E;
+                /* cor da borda superior */
+                border-radius: 50%;
+                animation: girar 0.8s linear infinite;
+            }
+
+            @keyframes girar {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        .imagem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 70%;
+            }
+        }
+
+        .infos-cadastro {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vh;
+            align-items: start;
+
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5vh;
+                align-items: center;
+                width: 45vh;
+
+
+                .input-individual {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 100%;
+                    gap: 0.5vh;
+
+                    label {
+                        font-weight: 400;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 4vh;
+                        border-radius: 0.5vh;
+                        border: solid 0.1vh rgb(153, 153, 153);
+                        padding: 0 5px;
+                    }
+
+                }
+            }
+
+            .texts {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 1.5%;
+                align-items: baseline;
+                padding: 0 5px;
+
+                p {
+                    font-size: 14px;
+                }
+
+                .escuro {
+
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: black;
+
+                }
+            }
+
+        }
+
+        .botao {
+            padding: 1vh;
+
+            button {
+                width: 20vh;
+                height: 6vh;
+                border-radius: 1vh;
+                border: solid 0px;
+                font-size: 1.8vh;
+                font-weight: 410;
+                transition: transform 0.3s ease-in-out; // animação suave
+            }
+
+            button:hover {
+                transform: scale(1.03); // aumenta 6% ao passar o mouse
+            }
+        }
+    }
+}
+
+;

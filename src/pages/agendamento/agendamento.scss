@@ -1,0 +1,221 @@
+.PrincipalNovo {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0vh;
+
+  .spiner-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vh;
+
+    img {
+      width: 70%;
+    }
+  }
+
+
+.spines-config {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 6px solid #063671;
+  border-top: 6px solid #AB092E;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.loading-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dots::after {
+  content: "...";
+  animation: pontinhos 1.2s infinite steps(4);
+}
+
+@keyframes pontinhos {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
+}
+
+
+.icon-sucesso {
+  font-size: 50px;
+  color: green;
+  font-weight: bold;
+  animation: pop 0.3s ease-out;
+}
+
+.msg-sucesso {
+  font-size: 22px;
+  color: green;
+  font-weight: 600;
+}
+
+.icon-erro {
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+  animation: pop 0.3s ease-out;
+}
+
+.msg-erro {
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+
+
+@keyframes pop {
+  0% { transform: scale(0.3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+  .conteudoNovo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    padding: 10vh;
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 55%;
+      align-items: center;
+    }
+
+    .titulo {
+      font-size: 3vh;
+      font-weight: 600;
+    }
+
+    .subtitulo {
+      width: 40vh;
+      font-size: 2.2vh;
+      margin-top: 2vh;
+    }
+
+    .lista-servicos {
+      width: 40vh;
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+
+      .servico {
+        padding: 1.2vh;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 1vh;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        gap: 1vh;
+        transition: 0.2s;
+
+        p {
+          display: flex;
+          align-items: center;
+          gap: 1vh;
+        }
+
+        img {
+          width: 2.6vh;
+        }
+
+        &:hover {
+          scale: 1.02;
+          background: rgb(245, 245, 245);
+        }
+      }
+    }
+
+    .linha-data {
+      width: 40vh;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 42%;
+        height: 4.5vh;
+        border: 1px solid rgb(180, 180, 180);
+        border-radius: 1vh;
+        padding: 0 1vh;
+      }
+
+      select {
+        width: 42%;
+        height: 4.5vh;
+        border: 1px solid rgb(180, 180, 180);
+        border-radius: 1vh;
+        padding: 0 1vh;
+      }
+    }
+
+    .valor {
+      font-size: 2.2vh;
+      margin-top: 1vh;
+    }
+
+    .botoes {
+      width: 40vh;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 18vh;
+        height: 6vh;
+        border-radius: 1vh;
+        border: none;
+        font-size: 1.8vh;
+        transition: 0.2s;
+      }
+
+      .voltar {
+        background: white;
+        border: 1px solid rgb(120, 120, 120);
+
+        &:hover {
+          background: rgb(240, 240, 240);
+        }
+      }
+
+      .avancar {
+        background: black;
+        color: white;
+
+        &:hover {
+          background: rgb(40, 40, 40);
+        }
+      }
+    }
+  }
+}

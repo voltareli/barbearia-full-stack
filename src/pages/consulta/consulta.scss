@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+}
+
+ .conteudo2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6vh;
+
+        .spines-config {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 5vh;
+
+            .loading-text {
+                font-weight: 410;
+                font-size: 2.3vh;
+            }
+
+            .dots {
+                display: inline-block;
+                width: 1em;
+                /* espaço fixo para 3 pontos */
+                text-align: left;
+            }
+
+            .dots::after {
+                content: '';
+                animation: dots 2s steps(4, end) infinite;
+            }
+
+            @keyframes dots {
+                0% {
+                    content: '';
+                }
+
+                25% {
+                    content: '.';
+                }
+
+                50% {
+                    content: '..';
+                }
+
+                75% {
+                    content: '...';
+                }
+
+                100% {
+                    content: '';
+                }
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+                border: 6px solid #063671;
+                border-top-color: #AB092E;
+                /* cor da borda superior */
+                border-radius: 50%;
+                animation: girar 0.8s linear infinite;
+            }
+
+            @keyframes girar {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }}
+
+.PrincipalHome2 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vh;
+
+
+    .topo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 3vh;
+        align-items: center;
+
+        .topo-1 {
+            width: 96%;
+            padding: 2vh 1vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .diferente {
+
+                width: 3.5vh;
+
+            }
+
+        }
+
+        .linha {
+            border-bottom: 1px solid #F0F0F0;
+            width: 100%;
+        }
+
+        .menu-icon{
+            display: flex;
+            gap: 1vh;
+            align-items: center;
+font-size: 2.5vh;
+            }
+
+        .menu-icon,
+        .alert-icon {
+            cursor: pointer;
+
+            img {
+                width: 4vh;
+            }
+
+        }
+    }
+
+    .conteudoHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4vh;
+
+        .linha2{
+            border-bottom: 3px solid #e4e2e2;
+            border-radius: 1vh;
+            width: 100%;
+        }
+
+        .data-container{
+            width: 95%;
+            .data{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                   font-weight: 600;
+                font-size: 22px;
+                gap: 1vh;
+
+                input{
+                    width: 25vh;
+                    padding: 1vh;
+                    border-radius: 1vh;
+                    font-size: 16px     ;
+                }
+                
+            }
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .saudacao {
+            font-size: 2.8vh;
+            font-weight: 600;
+        }
+
+        .novo-agendamento {
+            width: 43vh;
+            padding: 1.5vh;
+            box-shadow: 1px 1px 2px rgb(172, 172, 172);
+            border-radius: 1vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5vh;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            border: 1.5px solid #F0F0F0;
+            font-weight: 600;
+            font-size: 18px;
+
+            .icone {
+                img {
+                    width: 4.5vh;
+                }
+
+                display: flex;
+                align-items: baseline;
+                gap: 1.5vh;
+                font-size: 2vh;
+                font-weight: 550;
+            }
+
+            &:hover {
+                scale: 1.02;
+            }
+
+            .seta {
+                img {
+                    width: 2vh;
+                }
+            }
+        }
+
+        .agendamentos-ativos {
+            width: 46.2vh;
+            padding: 1.5vh;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5vh;
+
+            p {
+                font-size: 2.2vh;
+                font-weight: 550;
+            }
+
+            .card-agendamento {
+                border-radius: 1vh;
+                border: 2px solid #F0F0F0;
+                box-shadow: 1px 1px 2px rgb(172, 172, 172);
+                background: white;
+                display: flex;
+                flex-direction: column;
+                
+                .info-linha {
+                    padding: 1.5vh;
+                    display: flex;
+                    align-items: center;
+                    gap: 1vh;
+                    justify-content: space-between;
+                    background-color: #f7f7f7;
+                    border-bottom: 2px solid #e0e0e0;;
+                    border-top-left-radius: 1vh;
+                    border-top-right-radius: 1vh;
+                    .inicial {
+                        display: flex;
+                        gap: 1.5vh;
+                        align-items: center;
+
+                        .infos {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5vh;
+                            .person {
+                                font-weight: 600;
+                                font-size: 17px;
+                                color: black;
+                            }
+                            p{
+                                font-size: 16px;
+                                color: rgb(70, 70, 70);
+                                font-weight: 500;
+                            }
+
+                            .infos2{
+                                gap: 0.22vh;
+                                display: flex;
+                                flex-direction: column;
+
+                                img{
+                                    width: 2vh;
+                                };
+
+                                .outro{
+                                    gap:0.5vh;
+                                    display: flex;}
+
+                            }
+                        }
+                    }
+
+                    .icone {
+                        img {
+                            width: 4.5vh;
+                        }
+                    }
+
+                    .icones {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 1vh;
+
+                        .icone {
+                            border: 2px solid #F0F0F0;
+                            padding: 0.5vh;
+                            border-radius: 1vh;
+                            background-color: white;
+
+                            img {
+                                width: 2.5vh;
+                            }
+                        }
+                    }
+                }
+
+
+                .servicos {
+                    padding: 2vh 1vh;
+                    font-size: 1.7vh;
+                    color: rgb(70, 70, 70);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
